@@ -1,11 +1,10 @@
 FROM condaforge/mambaforge
 RUN apt-get upgrade
-RUN apt-get install git -y
 WORKDIR /content
-RUN git clone https://github.com/openvpi/DiffSinger.git
-RUN pip install pyproject
+RUN pip install jupyter pyproject
 RUN conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia -y
-RUN pip install jupyter
-RUN pip install -r /content/DiffSinger/requirements.txt
+RUN curl -v -o requirements.txt https://raw.githubusercontent.com/openvpi/DiffSinger/main/requirements.txt
+RUN pip install requirements.txt
+RUN rm -rf ./requirements.txt
 EXPOSE 8888
 CMD [ "jupyter-lab" ]
