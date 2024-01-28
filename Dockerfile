@@ -7,4 +7,4 @@ RUN wget https://raw.githubusercontent.com/openvpi/DiffSinger/main/requirements.
 RUN pip install -r ./requirements.txt
 RUN rm -rf ./requirements.txt
 EXPOSE 8888
-CMD [ "jupyter-lab", "--allow-root", "--no-browser" ]
+CMD [ "jupyter-lab", "--ip=0.0.0.0", "--allow-root", "--no-browser" ]
