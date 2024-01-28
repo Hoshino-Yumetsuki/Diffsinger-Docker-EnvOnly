@@ -1,5 +1,6 @@
 FROM condaforge/mambaforge
 RUN apt-get upgrade
+RUN apt-get install curl -y
 WORKDIR /content
 RUN pip install jupyter pyproject
 RUN conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia -y
