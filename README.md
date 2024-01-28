@@ -25,4 +25,4 @@ requirements.txt
  ```
  docker run -it --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -v <local path>/Diffsinger:/content/Diffsinger q78kg/diffsinger-env-only:main
  ```
-- 从Docker中找到连接Jupyter Lab的连接方式，然后进入，即可按照官方文档操作并开始训练
+- 从Docker中找到连接Jupyter Lab的连接方式，然后进入，或者使用vscode连接容器，即可按照官方文档操作并开始训练
