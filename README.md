@@ -23,6 +23,6 @@ requirements.txt
 - 放置训练Diffsinger模型所需的文件
 - 启动容器并将Diffsinger文件夹挂载到镜像中（在您有GPU情况下请直接复制命令，如果没有则将命令中关于gpu的部分删除）
  ```
- docker run -it --gpus all -p 8888:8888 -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -v <local path>/Diffsinger:/content/Diffsinger q78kg/diffsinger-env-only:<tags>
+ docker run -it --gpus all -p 8888:8888 -e NVIDIA_DRIVER_CAPABILITIES=all -e NVIDIA_VISIBLE_DEVICES=all -v <local path>/Diffsinger:/content/Diffsinger q78kg/diffsinger-env-only:main
  ```
 - 从127.0.0.1:8888访问Jupyter Lab，或使用VS Code连接容器，即可按照官方文档操作并开始训练
