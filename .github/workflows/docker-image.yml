@@ -29,7 +29,6 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: q78kg/diffsinger-env-only
-          tags: type=schedule,pattern=build-{{date 'YYYYMMDD'}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
