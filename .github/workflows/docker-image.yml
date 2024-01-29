@@ -16,22 +16,22 @@ jobs:
 
     steps:
       - name: Check out the repo
-        uses: actions/checkout@latest
+        uses: actions/checkout@v4
 
       - name: Log in to Docker Hub
-        uses: docker/login-action@latest
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Extract metadata for Docker
         id: meta
-        uses: docker/metadata-action@latest
+        uses: docker/metadata-action@v5
         with:
           images: q78kg/diffsinger-env-only
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@latest
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
