@@ -12,9 +12,9 @@ requirements.txt
 
 ## 准备工作
 
+- 安装Wsl发行版
 - 安装Docker
 - 安装Cuda
-- 安装Wsl发行版
 - 拉取镜像
 
 ## 开始训练
